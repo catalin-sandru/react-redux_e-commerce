@@ -1,13 +1,23 @@
 import styled from 'styled-components'
 
-export const NavStyle = styled.nav`
+export const NavStyle = styled.div`
   display: flex;
-  width: 100%;
   align-items: center;
-  background: green;
+  justify-content: space-between;
+  padding: 1rem;
 
-  &:last-child {
-    position: absolute;
-    right: 0;
+  img {
+    max-height: 3rem;
+  }
+
+  .navbar_nav {
+    display: inherit;
+    align-items: center;
+
+    a {
+      margin: 1rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
   }
 `
