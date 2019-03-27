@@ -6,15 +6,17 @@ import { NavStyle } from './navbar.style';
 
 const Navbar = () => (
   <NavStyle>
-    <div className="navbar_nav">
-      <img src={logo} alt="logo"/>
-      <Link to="/">
-        Home
+    <div className="nav_list">
+      <div className="navbar_nav">
+        <img src={logo} alt="logo"/>
+        <Link to="/">
+          Home
+        </Link>
+      </div>
+      <Link to="/cart">
+        <Button />
       </Link>
     </div>
-    <Link to="/cart">
-      <Button />
-    </Link>
   </NavStyle>
 )
 
