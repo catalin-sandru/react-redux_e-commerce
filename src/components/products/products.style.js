@@ -10,6 +10,12 @@ export const ProductWrapper = styled.div`
     img {
       max-width: 70%;
       height: auto;
+      padding: 1rem;
+      transition: 0.3s;
+
+      :hover {
+        transform: scale(1.2)
+      }
     }
   }
 
