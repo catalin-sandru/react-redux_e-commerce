@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HomeStyle = styled.div`
 display: grid;
 grid-gap: 1rem;
-/* grid-template-columns: auto auto auto auto; */
+margin: 1rem 1rem 2rem 1rem;
 
 @media (min-width: 768px) {
   grid-template-columns: repeat(2, auto)

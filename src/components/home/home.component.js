@@ -9,7 +9,7 @@ class Home extends Component {
 
   ProductList = () => {
     return(
-      <HomeStyle className="products_wrapper">
+      <HomeStyle>
         {storeProducts.map(({title, img, price, id}) => {
           return(
             <React.Fragment key={id}>

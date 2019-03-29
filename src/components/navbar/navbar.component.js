@@ -1,14 +1,16 @@
 import React from 'react'
-import logo from '../../asset/logo.svg'
+// import logo from '../../asset/logo.svg'
 import { Link } from 'react-router-dom'
 import Button from '../button/button.component';
 import { NavStyle } from './navbar.style';
+import { LogoIcon } from '../../asset/icons'
 
 const Navbar = () => (
   <NavStyle>
     <div className="nav_list">
       <div className="navbar_nav">
-        <img src={logo} alt="logo"/>
+        <LogoIcon />
+        {/* <img src={logo} alt="logo"/> */}
         <Link to="/">
           Home
         </Link>
