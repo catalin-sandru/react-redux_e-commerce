@@ -12,3 +12,9 @@ export const LogoIcon = () => {
     <i className="fas fa-mobile-alt"/>
   )
 }
+
+export const AddToCartIcon = () => {
+  return(
+    <i className="fas fa-cart-plus"/>
+  )
+}
