@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import {storeProducts} from '../../asset/data';
 import Title from '../title/title.component';
 import Products from '../products';
+import { HomeStyle } from './home.style';
 
 
 class Home extends Component {
 
   ProductList = () => {
     return(
-      <div>
+      <HomeStyle className="products_wrapper">
         {storeProducts.map(({title, img, price, id}) => {
           return(
             <React.Fragment key={id}>
@@ -20,7 +21,7 @@ class Home extends Component {
             </React.Fragment>
           )
         })}
-      </div>
+      </HomeStyle>
     )
   }
   
