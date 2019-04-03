@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { ProductWrapper } from './products.style';
 import { AddToCartIcon } from '../../asset/icons';
+import { Link } from 'react-router-dom';
 
 const Products = ({title, img, price}) => {
   return (
     <ProductWrapper>
       <div className="img_holder">
-        <img src={img} alt="product_image"/>
+        <Link to="/details">
+          <img src={img} alt="product_image"/>
+        </Link>
         <div className="cart_icon_hov">
           <AddToCartIcon/>
         </div>

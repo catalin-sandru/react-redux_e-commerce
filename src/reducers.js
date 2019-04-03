@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
+import { InitListReducer } from './components/home/home.reducer';
 
-const rootReducer = combineReducers({
-  
+export const rootReducer = combineReducers({
+  InitListReducer
 })
-
-export default rootReducer;

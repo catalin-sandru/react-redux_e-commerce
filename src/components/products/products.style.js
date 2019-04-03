@@ -3,11 +3,13 @@ import styled from 'styled-components'
 export const ProductWrapper = styled.div`
   border: 1px solid black;
   display: grid;
-  overflow: hidden;
 
   .img_holder {
     text-align: center;
     position: relative;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    cursor: pointer;
 
     .cart_icon_hov {
       font-size: 1.7rem;
@@ -31,7 +33,8 @@ export const ProductWrapper = styled.div`
     }
 
     :hover .cart_icon_hov {
-      transform: translate(0, 0)
+      transform: translate(0, 0);
+      padding: 0.5rem;
     }
   }
 
