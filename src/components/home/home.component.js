@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import Title from '../title/title.component';
 import Products from '../products';
 import { HomeStyle } from './home.style';
-import { HomeAction } from './home.action';
 
 class Home extends Component {
   
