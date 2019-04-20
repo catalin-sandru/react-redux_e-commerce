@@ -2,13 +2,15 @@ import React from 'react';
 import { ProductWrapper } from './products.style';
 import { AddToCartIcon } from '../../asset/icons';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { SingleItem } from './products.action'
 
-const Products = ({title, img, price}) => {
+const Products = ({title, img, price, getItem, id}) => {
   return (
     <ProductWrapper>
       <div className="img_holder">
         <Link to="/details">
-          <img src={img} alt="product_image"/>
+          <img src={img} alt="product_image" onClick={() => getItem(id)}/>
         </Link>
         <div className="cart_icon_hov">
           <AddToCartIcon/>
@@ -21,4 +23,10 @@ const Products = ({title, img, price}) => {
     </ProductWrapper>
   )
 }
- export default Products
+
+const mapStateToProps = state => ({getItem: state.HomeReducer})
+const mapDispachToProps = dispach => ({
+  getItem: id => dispach(SingleItem(id))
+})
+
+ export default connect(mapStateToProps, mapDispachToProps)(Products);

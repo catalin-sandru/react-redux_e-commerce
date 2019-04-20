@@ -1,4 +1,6 @@
-export const initActionList = payload => ({
-  type: 'initList',
-  payload
-})
+export const HomeAction = payload => {
+  return {
+    type: 'GET_ITEM', 
+    payload
+  }
+}

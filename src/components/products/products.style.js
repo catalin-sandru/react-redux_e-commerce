@@ -23,7 +23,7 @@ export const ProductWrapper = styled.div`
     img {
       max-width: 70%;
       height: auto;
-      padding: 1rem;
+      padding: 2rem;
       transition: all 0.3s;
     }
 

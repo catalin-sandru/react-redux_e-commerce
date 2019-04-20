@@ -1,10 +1,10 @@
 import { storeProducts } from '../../asset/data'
 
-export const InitListReducer = (state = storeProducts, action) => {
+export const HomeReducer = (state = storeProducts, action) => {
   switch(action.type) {
-    case 'initList':
-      return action.payload.map(product => ({...product}))
-    default:
-      return state
+    case 'GET_ITEM':
+      return state = storeProducts.find(item => item.id === action.payload);
+      default:
+        return state
   }
 }

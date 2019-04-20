@@ -16,8 +16,6 @@ const store = createStore(rootReducer, composeWithDevTools(
   applyMiddleware(...middleware)
 ))
 
-// console.log(store.getState())
-
 ReactDOM.render(
 <Provider store={store}>
   <BrowserRouter>

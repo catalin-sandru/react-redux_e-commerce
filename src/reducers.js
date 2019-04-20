@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { InitListReducer } from './components/home/home.reducer';
+import { HomeReducer } from './components/home/home.reducer';
+import { GetItem } from './components/products/products.reducer'
 
 export const rootReducer = combineReducers({
-  InitListReducer
+  HomeReducer,
+  GetItem
 })
