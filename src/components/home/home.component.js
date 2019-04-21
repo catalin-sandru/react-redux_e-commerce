@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Title from '../title/title.component';
 import Products from '../products';
 import { HomeStyle } from './home.style';
+import Modal from '../modal/modal.component';
 
 class Home extends Component {
   
@@ -21,6 +22,7 @@ class Home extends Component {
               img={img}
               price={price}
             />
+            <Modal />
           </React.Fragment>
         )
       })}

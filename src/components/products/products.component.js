@@ -18,7 +18,7 @@ const Products = ({title, img, price, getItem, id}) => {
       </div>
       <div className="prod_description">
         <h4>{title}</h4>
-        <h5>£: {price}</h5>
+        <h4>£: {price}</h4>
       </div>
     </ProductWrapper>
   )

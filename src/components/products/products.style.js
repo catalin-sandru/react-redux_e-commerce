@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 export const ProductWrapper = styled.div`
   border: 1px solid black;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   .img_holder {
     text-align: center;
@@ -18,12 +20,13 @@ export const ProductWrapper = styled.div`
       bottom: 0;
       transform: translate(100%, 100%);
       transition: 0.3s;
+      background: red;
     }
 
     img {
-      max-width: 70%;
+      max-width: 80%;
       height: auto;
-      padding: 2rem;
+      padding: 3rem;
       transition: all 0.3s;
     }
 
@@ -39,8 +42,8 @@ export const ProductWrapper = styled.div`
   }
 
   .prod_description {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    margin: 1rem;
+    padding: 1rem;
   }
 `
