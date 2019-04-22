@@ -4,19 +4,22 @@ import { Link } from 'react-router-dom'
 import Button from '../button/button.component';
 import { NavStyle } from './navbar.style';
 import { LogoIcon } from '../../asset/icons'
+import { CartIcon } from '../../asset/icons'
 
 const Navbar = () => (
   <NavStyle>
     <div className="nav_list">
       <div className="navbar_nav">
         <LogoIcon />
-        {/* <img src={logo} alt="logo"/> */}
         <Link to="/">
-          Home
+          <p>Home</p>
         </Link>
       </div>
       <Link to="/cart">
-        <Button />
+        <Button>
+          <CartIcon />
+          <p>My Cart</p>
+        </Button>
       </Link>
     </div>
   </NavStyle>

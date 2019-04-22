@@ -14,29 +14,34 @@ padding: 1rem;
 border-bottom-left-radius: 100% 0.7rem;
 border-bottom-right-radius: 100% 0.7rem;
 
+p {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
 .nav_list {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
   background: var(--bianca);
   border-radius: 0.5rem;
+
+  a {
+    text-decoration: none;
+    margin: 1rem;
+    font-size: 1.2rem;
+  }
 }
   
-  img {
-    color: white;
-    max-height: 3rem;
-  }
 
   .navbar_nav {
     display: inherit;
     align-items: center;
 
-    a {
-      margin: 1rem;
-      text-decoration: none;
-      color: var(--orange-peel);
-      font-size: 1.2rem;
+    i {
+      color: black;
+      font-size: 3rem;
+      margin-left: 1rem;
     }
   }
 `

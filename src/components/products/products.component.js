@@ -13,7 +13,7 @@ const Products = ({title, img, price, getItem, id}) => {
           <img src={img} alt="product_image" onClick={() => getItem(id)}/>
         </Link>
         <div className="cart_icon_hov">
-          <AddToCartIcon/>
+          <AddToCartIcon onClick={getItem(id)}/>
         </div>
       </div>
       <div className="prod_description">
@@ -24,7 +24,7 @@ const Products = ({title, img, price, getItem, id}) => {
   )
 }
 
-const mapStateToProps = state => ({getItem: state.HomeReducer})
+const mapStateToProps = state => ({products: state.HomeReducer})
 const mapDispachToProps = dispach => ({
   getItem: id => dispach(SingleItem(id))
 })

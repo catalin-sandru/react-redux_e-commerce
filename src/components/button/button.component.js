@@ -1,12 +1,13 @@
-import React from 'react';
-import { ButtonStyle } from './button.style';
-import { CartIcon } from '../../asset/icons';
+import styled from 'styled-components'
 
-const Button = () => (
-  <ButtonStyle className="button_wrapper">
-    <CartIcon/>
-    this is the Button
-  </ButtonStyle>
-)
+const Button = styled.div`
+  display: inline-flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  align-items: center;
+`
 
 export default Button
