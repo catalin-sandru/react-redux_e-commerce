@@ -6,13 +6,13 @@ export const ModalStyle = styled.div`
   color: red;
   display: flex;
   position: fixed;
+  top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
-  top: 25%;
-  margin: 0 auto;
-  max-width: 15rem;
-  height: 25rem;
+  left: 0;
+  margin: auto;
+  width: 30%;
+  height: 28rem;
   text-align: center;
   
   img {
@@ -22,5 +22,14 @@ export const ModalStyle = styled.div`
 
   h3 {
     padding: 0.5rem;
+  }
+
+  .button {
+    margin: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
   }
 `

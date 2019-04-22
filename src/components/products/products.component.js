@@ -12,8 +12,8 @@ const Products = ({title, img, price, getItem, id}) => {
         <Link to="/details">
           <img src={img} alt="product_image" onClick={() => getItem(id)}/>
         </Link>
-        <div className="cart_icon_hov">
-          <AddToCartIcon onClick={getItem(id)}/>
+        <div className="cart_icon_hov" onClick={() => getItem(id)}>
+          <AddToCartIcon />
         </div>
       </div>
       <div className="prod_description">

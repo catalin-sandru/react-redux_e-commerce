@@ -8,6 +8,7 @@ const Button = styled.div`
   padding: 0.5rem 1rem;
   text-decoration: none;
   align-items: center;
+  color: green;
 `
 
 export default Button

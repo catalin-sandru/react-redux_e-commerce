@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { ModalStyle } from './modal.style';
 import Button from '../button/button.component';
+import { Link } from 'react-router-dom'
 
 const Modal = (props) => {
   const product = [props.modalItem]
@@ -14,12 +15,16 @@ const Modal = (props) => {
             <img src={img} alt="productPicture"/>
             <h3>{title}</h3>
             <h4>Price: £{price}</h4>
-            <Button>
-              <h4>Back to Products</h4>
-            </Button>
-            <Button>
-              <h4>Go To Cart</h4>
-            </Button>
+            <Link to="/">
+              <Button className="button">
+                <h4>Back to Products</h4>
+              </Button>
+            </Link>
+            <Link to="/cart">
+              <Button className="button">
+                <h4>Go To Cart</h4>
+              </Button>
+            </Link>
           </div>
         )
       })}
