@@ -3,8 +3,19 @@ import { storeProducts } from '../../asset/data';
 export const GetItem = (state=[], action) => {
   switch(action.type){
     case 'getItem':
-      return state = storeProducts.find(item => item.id === action.payload);
+      return state = [storeProducts.find(item => item.id === action.payload)];
+    
     default: 
-      return state
+      return state;
+  }
+}
+
+export const OpenModal = (state = false, action) => {
+  switch(action.type){
+    case 'openModal':
+      return state = true;
+
+    default:
+      return state;
   }
 }

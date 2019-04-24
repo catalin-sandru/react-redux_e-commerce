@@ -4,3 +4,16 @@ export const SingleItem = payload => {
     payload
   }
 }
+
+export const OpenModal = (id) => {
+  return {
+    type: 'openModal',
+    id
+  }
+}
+
+export const CloseModal = () => {
+  return {
+    type: 'closeModal'
+  }
+}
