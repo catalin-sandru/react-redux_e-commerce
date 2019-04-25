@@ -3,7 +3,7 @@ import { DetailsStyle } from './details.style';
 import { connect } from 'react-redux';
 
 const Details = (props) => {
-  const product = [props.item]
+  const product = props.item
   return(
     <DetailsStyle>
       {product.map(({title, info, img, id}) => {

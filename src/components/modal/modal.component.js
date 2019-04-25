@@ -5,7 +5,8 @@ import Button from '../button/button.component';
 import { Link } from 'react-router-dom'
 
 const Modal = (props) => {
-  const product = props.modalItem
+  console.log(props)
+  const product = [props.modalItem]
   if(!product.length){
     return null;
   } else{
@@ -19,12 +20,12 @@ const Modal = (props) => {
             <h3>{title}</h3>
             <h4>Price: £{price}</h4>
             <Link to="/">
-              <Button className="button">
+              <Button className="button" >
                 <h4>Back to Products</h4>
               </Button>
             </Link>
             <Link to="/cart">
-              <Button className="button">
+              <Button className="button" >
                 <h4>Go To Cart</h4>
               </Button>
             </Link>
@@ -37,8 +38,8 @@ const Modal = (props) => {
 }
 
 const mapStateToProps = state => ({modalItem: state.GetItem})
-const mapDispachToProps = dispach => ({
-  openModal: () => dispach()
-})
+// const mapDispachToProps = dispach => ({
+//   closeModal: () => dispach(CloseModal())
+// })
 
-export default connect(mapStateToProps, mapDispachToProps)(Modal)
+export default connect(mapStateToProps)(Modal)

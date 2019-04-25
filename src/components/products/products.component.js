@@ -3,16 +3,15 @@ import { ProductWrapper } from './products.style';
 import { AddToCartIcon } from '../../asset/icons';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { SingleItem, OpenModal } from './products.action'
 
-const Products = ({title, img, price, getItem, id, openModal}) => {
+const Products = ({title, img, price, id}) => {
   return (
     <ProductWrapper>
       <div className="img_holder">
         <Link to="/details">
-          <img src={img} alt="product_image" onClick={() => getItem(id)}/>
+          <img src={img} alt="product_image" />
         </Link>
-        <div className="cart_icon_hov" onClick={() => getItem(id)}>
+        <div className="cart_icon_hov" >
           <AddToCartIcon />
         </div>
       </div>
@@ -25,9 +24,9 @@ const Products = ({title, img, price, getItem, id, openModal}) => {
 }
 
 const mapStateToProps = state => ({products: state.HomeReducer})
-const mapDispachToProps = dispach => ({
-  getItem: id => dispach(SingleItem(id)),
-  openModal: id => dispach(OpenModal(id))
-})
+// const mapDispachToProps = dispach => ({
+//   getItem: id => dispach(SingleItem(id)),
+//   closeModal: () => dispach(CloseModal())
+// })
 
- export default connect(mapStateToProps, mapDispachToProps)(Products);
+ export default connect(mapStateToProps)(Products);
