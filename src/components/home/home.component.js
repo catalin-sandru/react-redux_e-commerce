@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import Title from '../title/title.component';
 import Products from '../products';
 import { HomeStyle } from './home.style';
-import { HomeAction } from './home.action';
 
 class Home extends Component {
   
@@ -39,8 +38,5 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({initList: state.HomeReducer})
-const mapDispachToProps = dispach => ({
-  getItem: id => dispach(HomeAction(id))
-})
 
-export default connect(mapStateToProps, mapDispachToProps)(Home);
+export default connect(mapStateToProps)(Home);

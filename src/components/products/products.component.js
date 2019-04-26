@@ -10,7 +10,10 @@ const Products = ({title, img, price, id, getProductDetails}) => {
     <ProductWrapper>
       <div className="img_holder">
         <Link to="/details">
-          <img src={img} alt="product_image" onClick={() => getProductDetails(id)}/>
+          <img 
+            src={img} alt="product_image" 
+            onClick={() => getProductDetails(id)}
+          />
         </Link>
         <div className="cart_icon_hov" >
           <AddToCartIcon />
@@ -24,8 +27,9 @@ const Products = ({title, img, price, id, getProductDetails}) => {
   )
 }
 
+const mapStateToProps = state => ({products: state.DetailReducer})
 const mapDispachToProps = dispach => ({
   getProductDetails: id => dispach(DetailAction(id)),
 })
 
- export default connect(mapDispachToProps)(Products);
+ export default connect(mapStateToProps, mapDispachToProps)(Products);

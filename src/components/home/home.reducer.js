@@ -1,4 +1,4 @@
-import { storeProducts, detailProduct } from '../../asset/data'
+import { storeProducts } from '../../asset/data'
 
 const getItem = id => {
   let product = storeProducts.find(item => item.id === id)
