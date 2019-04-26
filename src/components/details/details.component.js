@@ -1,8 +1,10 @@
 import React from 'react';
 import { DetailsStyle } from './details.style';
 import { connect } from 'react-redux';
+import { DetailReducer, HomeReducer } from '../home/home.reducer';
 
 const Details = (props) => {
+  console.log(props)
   const product = props.item
   return(
     <DetailsStyle>
@@ -19,6 +21,9 @@ const Details = (props) => {
   )
 }
 
-const mapStateToProps = state => ({item: state.GetItem})
+const mapStateToProps = state => ({item: state.DetailReducer})
+const mapDispachToProps = dispach => ({
+  getItemDetails: id => dispach(HomeReducer(id))
+})
   
-export default connect(mapStateToProps)(Details);
+export default connect(mapStateToProps, mapDispachToProps)(Details);

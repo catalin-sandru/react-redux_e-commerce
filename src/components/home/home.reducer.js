@@ -7,13 +7,26 @@ const getItem = id => {
 
 export const HomeReducer = (state = storeProducts, action) => {
   switch(action.type) {
-    case 'GET_ITEM':
-      return state = getItem(action.payload)
     default:
       return state
   }
 }
 
-export const ModalReducer = () => {
-  
+export const DetailReducer = (state = [], action) => {
+  switch(action.type) {
+    case 'details':
+      const product = getItem(action.id) 
+      return state = [product]
+    default:
+      return state
+  }
+}
+
+export const ModalReducer = (state = [], action) => {
+  switch(action.type) {
+    case 'showModal':
+      return state = getItem(action.payload)
+    default:
+      return state
+  }
 }

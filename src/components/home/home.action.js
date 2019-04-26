@@ -4,3 +4,10 @@ export const HomeAction = payload => {
     payload
   }
 }
+
+export const DetailAction = id => {
+  return {
+    type: 'details',
+    id
+  }
+}

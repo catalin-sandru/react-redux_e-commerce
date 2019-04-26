@@ -3,13 +3,14 @@ import { ProductWrapper } from './products.style';
 import { AddToCartIcon } from '../../asset/icons';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { DetailAction } from '../home/home.action';
 
-const Products = ({title, img, price, id}) => {
+const Products = ({title, img, price, id, getProductDetails}) => {
   return (
     <ProductWrapper>
       <div className="img_holder">
         <Link to="/details">
-          <img src={img} alt="product_image" />
+          <img src={img} alt="product_image" onClick={() => getProductDetails(id)}/>
         </Link>
         <div className="cart_icon_hov" >
           <AddToCartIcon />
@@ -23,10 +24,8 @@ const Products = ({title, img, price, id}) => {
   )
 }
 
-const mapStateToProps = state => ({products: state.HomeReducer})
-// const mapDispachToProps = dispach => ({
-//   getItem: id => dispach(SingleItem(id)),
-//   closeModal: () => dispach(CloseModal())
-// })
+const mapDispachToProps = dispach => ({
+  getProductDetails: id => dispach(DetailAction(id)),
+})
 
- export default connect(mapStateToProps)(Products);
+ export default connect(mapDispachToProps)(Products);

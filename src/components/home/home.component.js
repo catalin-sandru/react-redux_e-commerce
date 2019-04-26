@@ -38,8 +38,7 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => ({initList: state.HomeReducer,
-getItem: state.getItem})
+const mapStateToProps = state => ({initList: state.HomeReducer})
 const mapDispachToProps = dispach => ({
   getItem: id => dispach(HomeAction(id))
 })
