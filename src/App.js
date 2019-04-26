@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import Cart from './components/cart'
 import Home from './components/home'
 import Details from './components/details'
-// import Modal from './components/modal'
+import Modal from './components/modal'
 
 class App extends Component {
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
           <Route path="/details" component={Details}/>
           <Route path="/cart" component={Cart}/>
         </Switch>
-        {/* <Modal /> */}
+        <Modal />
       </div>
     );
   }

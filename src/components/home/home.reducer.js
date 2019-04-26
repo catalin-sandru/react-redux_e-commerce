@@ -24,8 +24,10 @@ export const DetailReducer = (state = [], action) => {
 
 export const ModalReducer = (state = [], action) => {
   switch(action.type) {
-    case 'showModal':
-      return state = getItem(action.payload)
+    case 'openModal':
+      return state = [getItem(action.payload)]
+    case 'CLOSE_MODAL':
+      return state = []
     default:
       return state
   }

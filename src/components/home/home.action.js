@@ -11,3 +11,16 @@ export const DetailAction = id => {
     id
   }
 }
+
+export const OpenModalAction = payload => {
+  return{
+    type: 'openModal',
+    payload
+  }
+}
+
+export const CloseModalAction = () => {
+  return{
+    type: 'CLOSE_MODAL'
+  }
+}
