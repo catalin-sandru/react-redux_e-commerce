@@ -11,7 +11,7 @@ class Home extends Component {
 
     return(
       <HomeStyle>
-        {products.map(({title, img, price, id}) => {
+        {products.map(({title, img, price, id, inCart}) => {
           return(
           <React.Fragment key={id}>
             <Products
@@ -19,6 +19,7 @@ class Home extends Component {
               title={title}
               img={img}
               price={price}
+              inCart={inCart}
             />
           </React.Fragment>
         )

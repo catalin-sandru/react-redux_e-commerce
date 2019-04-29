@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { DetailAction, OpenModalAction, AddToCartAction } from '../home/home.action';
 
-const Products = ({title, img, price, id, getProductDetails, openModal, addToCart}) => {
+const Products = ({title, img, price, id, getProductDetails, openModal, addToCart, inCart}) => {
+  console.log(typeof(inCart))
   return (
     <ProductWrapper>
       <div className="img_holder">
@@ -15,13 +16,16 @@ const Products = ({title, img, price, id, getProductDetails, openModal, addToCar
             onClick={() => getProductDetails(id)}
           />
         </Link>
-        <div 
+        <button
+          disabled={inCart ? true : false}
           className="cart_icon_hov" 
-          onClick={() => 
-            openModal(id) &
-            addToCart(id)}>
-          <AddToCartIcon />
-        </div>
+          onClick={() => {
+            openModal(id)
+            addToCart(id)
+          }}
+        >
+        {inCart ? (<p disabled>In Cart</p>) : (<AddToCartIcon/>)}
+        </button>
       </div>
       <div className="prod_description">
         <h4>{title}</h4>

@@ -48,9 +48,12 @@ let cart = []
 export const CartReducer = (state = [], action) => {
   switch(action.type) {
     case 'ADD_TO_CART':
-      cart.push(getItem(action.id))
-      return state = cart
+      const product = getItem(action.id);
+      product.count = 1;
+      product.inCart = true;
+      cart.push(product);
+      return state = [...cart];
     default:
-     return state
+     return state;
   }
 }
