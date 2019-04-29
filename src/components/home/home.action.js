@@ -13,14 +13,21 @@ export const DetailAction = id => {
 }
 
 export const OpenModalAction = payload => {
-  return{
+  return {
     type: 'openModal',
     payload
   }
 }
 
 export const CloseModalAction = () => {
-  return{
+  return {
     type: 'CLOSE_MODAL'
+  }
+}
+
+export const AddToCartAction = id => {
+  return {
+    type: 'ADD_TO_CART',
+    id
   }
 }

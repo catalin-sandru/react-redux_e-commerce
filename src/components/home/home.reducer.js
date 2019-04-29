@@ -5,6 +5,16 @@ const getItem = id => {
   return product
 }
 
+
+const AddToCart = (id) => {
+  let cart = [];
+  const index = storeProducts.indexOf(getItem(id))
+  cart.push([index])
+  console.log(cart)
+  
+  return cart
+}
+
 export const HomeReducer = (state = storeProducts, action) => {
   switch(action.type) {
     default:
@@ -30,5 +40,17 @@ export const ModalReducer = (state = [], action) => {
       return state = []
     default:
       return state
+  }
+}
+
+
+let cart = []
+export const CartReducer = (state = [], action) => {
+  switch(action.type) {
+    case 'ADD_TO_CART':
+      cart.push(getItem(action.id))
+      return state = cart
+    default:
+     return state
   }
 }

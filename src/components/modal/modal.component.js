@@ -7,7 +7,8 @@ import { CloseModalAction } from '../home/home.action'
 
 const Modal = (props) => {
 
-  const product = props.modalItem
+  const product = props.modalItem;
+  const closeModal = props.closeModal;
 
   if(!product.length){
     return null;
@@ -24,7 +25,7 @@ const Modal = (props) => {
             <Link to="/">
               <Button 
                 className="button" 
-                onClick={() => props.closeModal()}
+                onClick={() => closeModal()}
               >
                 <h4>Back to Products</h4>
               </Button>
@@ -32,7 +33,7 @@ const Modal = (props) => {
             <Link to="/cart">
               <Button
                 className="button"
-                onClick={() => props.closeModal()}
+                onClick={() => closeModal()}
                 >
                 <h4>Go To Cart</h4>
               </Button>
