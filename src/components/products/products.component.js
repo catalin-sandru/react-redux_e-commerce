@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { DetailAction, OpenModalAction, AddToCartAction } from '../home/home.action';
 
 const Products = ({title, img, price, id, getProductDetails, openModal, addToCart, inCart}) => {
-  console.log(typeof(inCart))
   return (
     <ProductWrapper>
       <div className="img_holder">

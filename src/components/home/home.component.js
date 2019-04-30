@@ -31,7 +31,7 @@ class Home extends Component {
   render() {
     return(
       <div>
-        <Title />
+        <Title title="Our Products"/>
         {this.ProductList()}
       </div>
     )

@@ -5,16 +5,6 @@ const getItem = id => {
   return product
 }
 
-
-const AddToCart = (id) => {
-  let cart = [];
-  const index = storeProducts.indexOf(getItem(id))
-  cart.push([index])
-  console.log(cart)
-  
-  return cart
-}
-
 export const HomeReducer = (state = storeProducts, action) => {
   switch(action.type) {
     default:

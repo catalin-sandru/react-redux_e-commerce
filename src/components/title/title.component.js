@@ -1,10 +1,14 @@
 import React from 'react'
 import { TitleStyle } from './title.style';
 
-export default function Title() {
+const Title = ({title}) => {
   return (
     <TitleStyle  className="title">
-      <h1>Our Products</h1>
+      <h1>{title}</h1>
     </TitleStyle>
   )
 }
+
+// const mapStateToProps = state => ({})
+
+export default Title;
