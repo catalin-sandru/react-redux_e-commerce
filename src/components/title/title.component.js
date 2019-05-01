@@ -9,6 +9,4 @@ const Title = ({title}) => {
   )
 }
 
-// const mapStateToProps = state => ({})
-
 export default Title;
