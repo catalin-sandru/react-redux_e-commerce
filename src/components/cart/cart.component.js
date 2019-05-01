@@ -1,26 +1,34 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Title from '../title/title.component';
+import Title from '../title';
 import { CartStyle } from './cart.style';
+import CartColumns from './cartColumns';
+import CartQuantity from './cartQuantuty/cartQuantity';
 
 const Cart = (props) => {
-  console.log(props)
+
   const cartProduct = props.cartItem;
+
   if(!cartProduct.length) {
     return <Title title="your cart is empty"/>
   } else{
     return(
-      <CartStyle>
+      <div>
         <Title title="your cart"/>
-        {cartProduct.map(({title}) => {
+        <CartColumns />
+        {cartProduct.map(({title, id, img, price, count}) => {
           return(
-            <div>
-              <h1>{title}</h1>
-            </div>
+            <CartStyle key={id}>
+              <img src={img} alt="ProducImage"/>
+              <p>{title}</p>
+              <p>£: {price}</p>
+              <CartQuantity count={count}/>
+              <i class="fas fa-times"/>
+              <p>Item Total: £{price}</p>
+            </CartStyle>
           )
         })}
-
-      </CartStyle>
+      </div>
     )
   }
 }
