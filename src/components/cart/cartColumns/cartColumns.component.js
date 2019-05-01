@@ -1,5 +1,4 @@
 import React from 'react'
-import { CartColumnsStyle } from './cartColumns.style';
 import { CartStyle } from '../cart.style';
 
 const CartColumns = () => {

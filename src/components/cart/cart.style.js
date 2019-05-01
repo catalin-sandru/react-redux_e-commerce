@@ -7,12 +7,25 @@ export const CartStyle = styled.div`
   margin: 0;
   grid-gap: 0.5rem;
   width: 100%;
+  font-weight: bold;
+
+  h6 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    h6 {
+      display: none;
+    }
+  }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(6, 1fr);
     img {
-      max-width: 15%;
+      max-width: 80%;
       height: auto;
+      justify-self: center;
     }
   }
 `
