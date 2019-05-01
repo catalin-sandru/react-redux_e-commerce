@@ -17,7 +17,7 @@ const Modal = (props) => {
       <ModalStyle>
       {product.map(({title, id, img, price}) => {
         return(
-          <div key={id}>
+          <div className="modal" key={id}>
             <h3>Item added to the cart</h3>
             <img src={img} alt="productPicture"/>
             <h3>{title}</h3>
