@@ -9,6 +9,11 @@ export const CartColumnsStyle = styled.div`
   font-size: 1.5rem;
   grid-gap: 0.5rem;
 
+  img {
+    max-width: 15%;
+    height: auto;
+  }
+
   @media (min-width: 768px) {
     display: none;
   }

@@ -4,6 +4,9 @@ export const CartStyle = styled.div`
   display: grid;
   align-items: center;
   text-align: center;
+  margin: 0;
+  grid-gap: 0.5rem;
+  width: 100%;
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(6, auto);

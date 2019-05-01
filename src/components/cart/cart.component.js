@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Title from '../title';
 import { CartStyle } from './cart.style';
 import CartColumns from './cartColumns';
-import CartQuantity from './cartQuantuty/cartQuantity';
+import CartQuantity from './cartQuantity';
 
 const Cart = (props) => {
 
