@@ -6,7 +6,7 @@ export const ButtonStyle = styled.div`
   border-radius: 0.5rem;
   display: inline-flex;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   text-decoration: none;
   align-items: center;
   color: green;
