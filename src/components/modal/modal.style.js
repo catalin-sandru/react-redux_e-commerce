@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 export const ModalStyle = styled.div`
-  background: var(--black-pearl);
-  /* opacity: 0.4; */
   color: red;
   display: flex;
   position: fixed;
@@ -12,6 +10,7 @@ export const ModalStyle = styled.div`
   left: 0;
   
   .modal {
+    background: var(--black-pearl);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -23,7 +23,7 @@ const Cart = (props) => {
               <p>{title}</p>
               <p>£: {price}</p>
               <CartQuantity count={count}/>
-              <i class="fas fa-times"/>
+              <i className="fas fa-times"/>
               <p>Item Total: £{price}</p>
             </CartStyle>
           )

@@ -1,6 +1,7 @@
 import React from 'react';
 import { DetailsStyle } from './details.style';
 import { connect } from 'react-redux';
+import { Button } from '../button/button.component';
 
 const Details = (props) => {
   let details = props.item
@@ -12,6 +13,7 @@ const Details = (props) => {
             <h1>{title}</h1>
             <p>{info}</p>
             <img src={img} alt="productPicture"/>
+            <Button />
           </div>
         )
       })}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { ModalStyle } from './modal.style';
-import Button from '../button/button.component';
+import Button from '../button';
 import { Link } from 'react-router-dom'
 import { CloseModalAction } from '../home/home.action'
 
@@ -24,19 +24,17 @@ const Modal = (props) => {
             <h4>Price: £{price}</h4>
             <Link to="/">
               <Button 
-                className="button" 
                 onClick={() => closeModal()}
-              >
-                <h4>Back to Products</h4>
-              </Button>
+                buttonText="back to products"
+                className="button" 
+              />
             </Link>
             <Link to="/cart">
               <Button
-                className="button"
                 onClick={() => closeModal()}
-                >
-                <h4>Go To Cart</h4>
-              </Button>
+                buttonText="go to cart"
+                className="button"
+              />
             </Link>
           </div>
         )
