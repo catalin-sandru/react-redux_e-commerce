@@ -16,7 +16,7 @@ const Navbar = () => (
         </Link>
       </div>
       <Link to="/cart">
-        <Button 
+        <Button
           buttonText="My Cart" 
           icon={<CartIcon/>}
         />

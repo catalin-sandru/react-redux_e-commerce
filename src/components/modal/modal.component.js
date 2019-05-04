@@ -5,17 +5,14 @@ import Button from '../button';
 import { Link } from 'react-router-dom'
 import { CloseModalAction } from '../home/home.action'
 
-const Modal = (props) => {
+const Modal = ({modalItem, closeModal}) => {
 
-  const product = props.modalItem;
-  const closeModal = props.closeModal;
-
-  if(!product.length){
+  if(!modalItem.length){
     return null;
   } else{
     return(
       <ModalStyle>
-      {product.map(({title, id, img, price}) => {
+      {modalItem.map(({title, id, img, price}) => {
         return(
           <div className="modal" key={id}>
             <h3>Item added to the cart</h3>
@@ -23,18 +20,20 @@ const Modal = (props) => {
             <h3>{title}</h3>
             <h4>Price: £{price}</h4>
             <Link to="/">
-              <Button 
-                onClick={() => closeModal()}
-                buttonText="back to products"
-                className="button" 
-              />
+              <div onClick={closeModal}>
+                <Button 
+                  buttonText="back to products"
+                  className="button" 
+                  />
+              </div>
             </Link>
             <Link to="/cart">
-              <Button
-                onClick={() => closeModal()}
-                buttonText="go to cart"
-                className="button"
-              />
+              <div onClick={closeModal}>
+                <Button
+                  buttonText="go to cart"
+                  className="button"
+                  />
+              </div>
             </Link>
           </div>
         )

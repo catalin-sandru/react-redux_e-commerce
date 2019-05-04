@@ -3,12 +3,12 @@ import { DetailsStyle } from './details.style';
 import { connect } from 'react-redux';
 import { Button } from '../button/button.component';
 import { Link } from 'react-router-dom'
+import { AddToCartAction } from '../home/home.action';
 
-const Details = (props) => {
-  let details = props.item
+const Details = ({product, addToCart}) => {
   return(
     <DetailsStyle>
-    {details.map(({title, info, img, id, company, price}) => { 
+    {product.map(({title, info, img, id, company, price, inCart}) => {
         return(
           <div key={id} className="detailsWrapper">
             <h1>{title}</h1>
@@ -24,10 +24,16 @@ const Details = (props) => {
                   <Button
                     buttonText="back to products"/>
                 </Link>
-                <Link to="/cart">
-                  <Button 
-                    buttonText="go to cart"/>
-                </Link>
+                {inCart ? 
+                  <Link to="/cart">
+                    <Button
+                      buttonText="go to cart"/>
+                  </Link> : 
+                  <div onClick={() => addToCart(id)}>
+                    <Button 
+                      buttonText="add to cart"/>
+                  </div>
+                  }
               </div>
             </div>
           </div>
@@ -37,6 +43,9 @@ const Details = (props) => {
   )
 }
 
-const mapStateToProps = state => ({item: state.DetailReducer})
+const mapStateToProps = state => ({product: state.DetailReducer});
+const mapDispachToProps = dispach => ({
+  addToCart: id => dispach(AddToCartAction(id))
+})
   
-export default connect(mapStateToProps)(Details);
+export default connect(mapStateToProps, mapDispachToProps)(Details);

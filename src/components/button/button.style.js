@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ButtonStyle = styled.div`
+export const ButtonStyle = styled.button`
   height: 100%;
   border: 0.1rem solid red;
   border-radius: 0.5rem;

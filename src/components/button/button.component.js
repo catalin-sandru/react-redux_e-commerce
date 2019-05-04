@@ -1,10 +1,10 @@
 import React from 'react'
 import { ButtonStyle } from './button.style';
 
-export const Button = ({buttonText, icon, onClick}) => {
+export const Button = ({icon, buttonText}) => {
   return(
-    <ButtonStyle onClick={onClick}>
-      {icon}
+    <ButtonStyle>
+      {icon} 
       <p>{buttonText}</p>
     </ButtonStyle>
   )
