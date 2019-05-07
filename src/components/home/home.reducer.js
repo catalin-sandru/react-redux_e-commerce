@@ -25,7 +25,7 @@ export const DetailReducer = (state = [], action) => {
 export const ModalReducer = (state = [], action) => {
   switch(action.type) {
     case 'openModal':
-      return state = [getItem(action.payload)]
+      return state = [getItem(action.id)]
     case 'CLOSE_MODAL':
       return state = []
     default:
@@ -34,15 +34,30 @@ export const ModalReducer = (state = [], action) => {
 }
 
 
-let cart = []
 export const CartReducer = (state = [], action) => {
   switch(action.type) {
     case 'ADD_TO_CART':
       const product = getItem(action.id);
       product.count = 1;
       product.inCart = true;
-      cart.push(product);
-      return state = [...cart];
+      state = [
+        ...state,
+        product
+      ]
+      return state
+
+    case 'INCREMENT':
+      return state.map(product => product.id === action.id ? 
+        ({...product, count: product.count+1}) : 
+        product
+      )
+      
+    case 'DECREMENT':
+      return state.map(product => product.id === action.id ? 
+        ({...product, count: product.count > 0 ? product.count-1 : 0}) : 
+        product
+      )
+
     default:
      return state;
   }

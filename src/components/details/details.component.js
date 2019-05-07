@@ -30,7 +30,7 @@ const Details = ({product, addToCart}) => {
                       buttonText="go to cart"/>
                   </Link> : 
                   <div onClick={() => addToCart(id)}>
-                    <Button 
+                    <Button
                       buttonText="add to cart"/>
                   </div>
                   }

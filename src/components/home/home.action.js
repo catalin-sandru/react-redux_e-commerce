@@ -12,10 +12,10 @@ export const DetailAction = id => {
   }
 }
 
-export const OpenModalAction = payload => {
+export const OpenModalAction = id => {
   return {
     type: 'openModal',
-    payload
+    id
   }
 }
 
@@ -28,6 +28,20 @@ export const CloseModalAction = () => {
 export const AddToCartAction = id => {
   return {
     type: 'ADD_TO_CART',
+    id
+  }
+}
+
+export const IncrementAction = id => {
+  return {
+    type: 'INCREMENT',
+    id
+  }
+}
+
+export const DecrementAction = id => {
+  return {
+    type: 'DECREMENT',
     id
   }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import { CartQuantityStyle } from './cartQuantity.style';
 
-const CartQuantity = ({count}) => {
+const CartQuantity = ({count, increment, decrement}) => {
   return(
     <CartQuantityStyle>
-      <p>-</p>
+      <p onClick={decrement}>-</p>
       <p>{count}</p>
-      <p>+</p>
+      <p onClick={increment}>+</p>
     </CartQuantityStyle>
   )
 }
