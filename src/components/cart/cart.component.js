@@ -16,7 +16,7 @@ const Cart = ({cartItem, increment, decrement}) => {
       <div>
         <Title title="your cart"/>
         <CartColumns />
-        {cartItem.map(({title, id, img, price, count}) => {
+        {cartItem.map(({title, id, img, price, count, total}) => {
           return(
             <CartStyle key={id}>
               <img src={img} alt="ProducImage"/>
@@ -27,7 +27,7 @@ const Cart = ({cartItem, increment, decrement}) => {
                 decrement={() => decrement(id)}
                 increment={() => increment(id)}/>
               <i className="fas fa-times"/>
-              <p>Item Total: £{price}</p>
+              <p>Item Total: £{total}</p>
             </CartStyle>
           )
         })}

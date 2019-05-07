@@ -40,6 +40,7 @@ export const CartReducer = (state = [], action) => {
       const product = getItem(action.id);
       product.count = 1;
       product.inCart = true;
+      product.total = product.count * product.price;
       state = [
         ...state,
         product
@@ -48,13 +49,17 @@ export const CartReducer = (state = [], action) => {
 
     case 'INCREMENT':
       return state.map(product => product.id === action.id ? 
-        ({...product, count: product.count+1}) : 
+        ({...product, 
+          total: product.count * product.price + product.price, 
+          count: product.count+1}) : 
         product
       )
       
     case 'DECREMENT':
       return state.map(product => product.id === action.id ? 
-        ({...product, count: product.count > 0 ? product.count-1 : 0}) : 
+        ({...product, 
+          count: product.count > 0 ? product.count-1 : 0, 
+          total: product.count * product.price - product.price}) : 
         product
       )
 
