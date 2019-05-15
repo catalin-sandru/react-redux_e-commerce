@@ -45,3 +45,9 @@ export const DecrementAction = id => {
     id
   }
 }
+
+export const CartTotalAction = () => {
+  return{
+    type: 'CART-TOTAL'
+  }
+}

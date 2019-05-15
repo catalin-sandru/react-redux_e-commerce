@@ -31,6 +31,14 @@ export const CartStyle = styled.div`
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(6, 1fr);
+
+    /* .cart-total {
+      display: flex;
+      flex-direction: column;
+      right: 2rem;
+      position: absolute;
+    } */
+
     img {
       max-width: 35%;
       height: auto;

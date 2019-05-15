@@ -1,6 +1,6 @@
-import { storeProducts } from '../../asset/data'
+import { storeProducts } from '../../asset/data';
 
-const getItem = id => {
+  const getItem = id => {
   let product = storeProducts.find(item => item.id === id)
   return product
 }
@@ -37,13 +37,13 @@ export const ModalReducer = (state = [], action) => {
 export const CartReducer = (state = [], action) => {
   switch(action.type) {
     case 'ADD_TO_CART':
-      const product = getItem(action.id);
+      let product = getItem(action.id);
       product.count = 1;
       product.inCart = true;
       product.total = product.count * product.price;
       state = [
         ...state,
-        product
+        product,
       ]
       return state
 
@@ -62,8 +62,17 @@ export const CartReducer = (state = [], action) => {
           total: product.count * product.price - product.price}) : 
         product
       )
-
     default:
      return state;
+  }
+}
+
+export const CartTotal = (state = [0], action) => {
+  switch(action.type) {
+    case 'CART-TOTAL':
+      
+    return state
+  default:
+    return state
   }
 }

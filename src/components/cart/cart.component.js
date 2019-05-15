@@ -5,10 +5,10 @@ import { CartStyle } from './cart.style';
 import CartColumns from './cartColumns';
 import CartQuantity from './cartQuantity';
 import Button from '../button';
-import { IncrementAction, DecrementAction } from '../home/home.action';
+import { IncrementAction, DecrementAction, CartTotalAction } from '../home/home.action';
+import { RemoveItemIcon } from '../../asset/icons';
 
-const Cart = ({cartItem, increment, decrement}) => {
-
+const Cart = ({cartItem, increment, decrement, cartTotal}) => {
   if(!cartItem.length) {
     return <Title title="your cart is empty"/>
   } else{
@@ -26,24 +26,29 @@ const Cart = ({cartItem, increment, decrement}) => {
                 count={count}
                 decrement={() => decrement(id)}
                 increment={() => increment(id)}/>
-              <i className="fas fa-times"/>
+              <RemoveItemIcon />
               <p>Item Total: £{total}</p>
             </CartStyle>
           )
         })}
-        <div>
+        <div className="cart-total">
           <Button 
             buttonText="clear cart"/>
-          <h5>Cart Total: £{}</h5>
+          <h5>Cart Total: £<span>{cartTotal}</span></h5>
         </div>
       </div>
     )
   }
 }
-const mapStateToProps = state => ({cartItem: state.CartReducer})
-const mapDispachtoProps = dispach => ({
-  increment: id => dispach(IncrementAction(id)),
-  decrement: id => dispach(DecrementAction(id))
+const mapStateToProps = state => ({
+  cartItem: state.CartReducer,
+  cartTotal: state.CartTotal
 })
 
-export default connect(mapStateToProps, mapDispachtoProps)(Cart)
+const mapDispachToProps = dispach => ({
+  increment: id => dispach(IncrementAction(id)),
+  decrement: id => dispach(DecrementAction(id)),
+  // cartTotal: () => dispach(CartTotalAction())
+})
+
+export default connect(mapStateToProps, mapDispachToProps)(Cart)

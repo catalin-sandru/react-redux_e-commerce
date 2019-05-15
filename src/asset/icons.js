@@ -18,3 +18,9 @@ export const AddToCartIcon = () => {
     <i className="fas fa-cart-plus"/>
   )
 }
+
+export const RemoveItemIcon = () => {
+  return(
+    <i className="fas fa-times"/>
+  )
+}
