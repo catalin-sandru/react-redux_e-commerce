@@ -19,8 +19,10 @@ export const AddToCartIcon = () => {
   )
 }
 
-export const RemoveItemIcon = () => {
+export const RemoveItemIcon = ({removeItem}) => {
   return(
-    <i className="fas fa-times"/>
+    <i 
+      className="fas fa-times"
+      onClick={removeItem}/>
   )
 }

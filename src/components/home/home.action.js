@@ -52,3 +52,10 @@ export const ClearCartAction = () => {
     type: 'CLEAR-CART'
   }
 }
+
+export const RemoveItemAction = id => {
+  return {
+    type: 'REMOVE-ITEM',
+    id
+  }
+}

@@ -4,11 +4,11 @@ import Title from '../title';
 import { CartStyle } from './cart.style';
 import CartColumns from './cartColumns';
 import CartQuantity from './cartQuantity';
-import { IncrementAction, DecrementAction, ClearCartAction } from '../home/home.action';
+import { IncrementAction, DecrementAction, ClearCartAction, RemoveItemAction } from '../home/home.action';
 import { RemoveItemIcon } from '../../asset/icons';
 import CartTotal from './cartTotal/cartTotal.component';
 
-const Cart = ({cartItem, increment, decrement, clearCart}) => {
+const Cart = ({cartItem, increment, decrement, clearCart, removeItem}) => {
   if(!cartItem.length) {
     return <Title title="your cart is empty"/>
   } else{
@@ -27,7 +27,7 @@ const Cart = ({cartItem, increment, decrement, clearCart}) => {
                 decrement={() => decrement(id)}
                 increment={() => increment(id)}
               />
-              <RemoveItemIcon />
+              <RemoveItemIcon removeItem={() => removeItem(id)}/>
               <p>Item Total: £{total}</p>
             </CartStyle>
           )
@@ -46,7 +46,8 @@ const mapStateToProps = state => ({
 const mapDispachToProps = dispach => ({
   increment: id => dispach(IncrementAction(id)),
   decrement: id => dispach(DecrementAction(id)),
-  clearCart: () => dispach(ClearCartAction())
+  clearCart: () => dispach(ClearCartAction()),
+  removeItem: id => dispach(RemoveItemAction(id))
 })
 
 export default connect(mapStateToProps, mapDispachToProps)(Cart)

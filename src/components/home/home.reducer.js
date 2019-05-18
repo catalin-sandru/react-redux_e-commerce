@@ -65,8 +65,15 @@ export const CartReducer = (state = [], action) => {
     
     case 'CLEAR-CART':
       state.map(item => item.inCart = false)
-      return state = []
+      return state = [];
 
+    case 'REMOVE-ITEM':
+      const findItem = state.find(item => item.id === action.id)
+      findItem.inCart = false
+      const index = state.indexOf(findItem)
+      state.splice([index], 1)
+      return [...state]
+      
     default:
      return state;
   }
