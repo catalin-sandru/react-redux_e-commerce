@@ -10,6 +10,7 @@ export const ButtonStyle = styled.button`
   text-decoration: none;
   align-items: center;
   color: green;
+  font-size: 1rem;
 
   
   a {

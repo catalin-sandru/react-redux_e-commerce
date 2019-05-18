@@ -34,6 +34,7 @@ export const ModalStyle = styled.div`
     a {
       text-decoration: none;
       font-weight: bold;
+      margin: 0.35rem 0;
     }
   }
 `

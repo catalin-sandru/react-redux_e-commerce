@@ -15,7 +15,7 @@ export const CartStyle = styled.div`
     text-transform: uppercase;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,15 +29,8 @@ export const CartStyle = styled.div`
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(6, 1fr);
-
-    /* .cart-total {
-      display: flex;
-      flex-direction: column;
-      right: 2rem;
-      position: absolute;
-    } */
 
     img {
       max-width: 35%;

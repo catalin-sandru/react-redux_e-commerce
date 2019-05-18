@@ -32,9 +32,11 @@ const Cart = ({cartItem, increment, decrement, clearCart, removeItem}) => {
             </CartStyle>
           )
         })}
-        <CartTotal 
-          cartItem={cartItem}
-          clearCart={() => clearCart()}/>
+        {/* <CartTotalStyle> */}
+          <CartTotal 
+            cartItem={cartItem}
+            clearCart={() => clearCart()}/>
+        {/* </CartTotalStyle> */}
       </div>
     )
   }
