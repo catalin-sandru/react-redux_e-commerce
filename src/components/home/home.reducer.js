@@ -46,8 +46,8 @@ export const CartReducer = (state = [], action) => {
         product,
       ]
       return state
-
-    case 'INCREMENT':
+      
+      case 'INCREMENT':
       return state.map(product => product.id === action.id ? 
         ({...product, 
           total: product.count * product.price + product.price, 
@@ -62,17 +62,8 @@ export const CartReducer = (state = [], action) => {
           total: product.count * product.price - product.price}) : 
         product
       )
+
     default:
      return state;
-  }
-}
-
-export const CartTotal = (state = [0], action) => {
-  switch(action.type) {
-    case 'CART-TOTAL':
-      
-    return state
-  default:
-    return state
   }
 }
