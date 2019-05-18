@@ -4,11 +4,11 @@ import Title from '../title';
 import { CartStyle } from './cart.style';
 import CartColumns from './cartColumns';
 import CartQuantity from './cartQuantity';
-import { IncrementAction, DecrementAction } from '../home/home.action';
+import { IncrementAction, DecrementAction, ClearCartAction } from '../home/home.action';
 import { RemoveItemIcon } from '../../asset/icons';
 import CartTotal from './cartTotal/cartTotal.component';
 
-const Cart = ({cartItem, increment, decrement}) => {
+const Cart = ({cartItem, increment, decrement, clearCart}) => {
   if(!cartItem.length) {
     return <Title title="your cart is empty"/>
   } else{
@@ -33,7 +33,8 @@ const Cart = ({cartItem, increment, decrement}) => {
           )
         })}
         <CartTotal 
-          cartItem={cartItem}/>
+          cartItem={cartItem}
+          clearCart={() => clearCart()}/>
       </div>
     )
   }
@@ -44,7 +45,8 @@ const mapStateToProps = state => ({
 
 const mapDispachToProps = dispach => ({
   increment: id => dispach(IncrementAction(id)),
-  decrement: id => dispach(DecrementAction(id))
+  decrement: id => dispach(DecrementAction(id)),
+  clearCart: () => dispach(ClearCartAction())
 })
 
 export default connect(mapStateToProps, mapDispachToProps)(Cart)

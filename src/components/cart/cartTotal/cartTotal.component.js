@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../button';
 
-const CartTotal = ({cartItem}) => {
+const CartTotal = ({cartItem, clearCart}) => {
 
   const totalHandler = () => {
     const product = 
@@ -15,6 +15,7 @@ const CartTotal = ({cartItem}) => {
     <div className="cart-total">
         <div>
           <Button 
+            clearCart={clearCart}
             buttonText="clear cart"/>
           <h5>Cart Total: £{totalHandler()}</h5>
         </div>

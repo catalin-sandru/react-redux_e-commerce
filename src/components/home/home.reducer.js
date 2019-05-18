@@ -8,7 +8,7 @@ import { storeProducts } from '../../asset/data';
 export const HomeReducer = (state = storeProducts, action) => {
   switch(action.type) {
     default:
-      return state
+      return [...state]
   }
 }
 
@@ -37,7 +37,7 @@ export const ModalReducer = (state = [], action) => {
 export const CartReducer = (state = [], action) => {
   switch(action.type) {
     case 'ADD_TO_CART':
-      let product = getItem(action.id);
+      const product = getItem(action.id);
       product.count = 1;
       product.inCart = true;
       product.total = product.count * product.price;
@@ -62,6 +62,10 @@ export const CartReducer = (state = [], action) => {
           total: product.count * product.price - product.price}) : 
         product
       )
+    
+    case 'CLEAR-CART':
+      state.map(item => item.inCart = false)
+      return state = []
 
     default:
      return state;

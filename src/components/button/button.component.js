@@ -1,9 +1,9 @@
 import React from 'react'
 import { ButtonStyle } from './button.style';
 
-export const Button = ({icon, buttonText}) => {
+export const Button = ({icon, buttonText, clearCart}) => {
   return(
-    <ButtonStyle>
+    <ButtonStyle onClick={clearCart}>
       {icon} 
       <p>{buttonText}</p>
     </ButtonStyle>

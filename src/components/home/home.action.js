@@ -45,3 +45,10 @@ export const DecrementAction = id => {
     id
   }
 }
+
+
+export const ClearCartAction = () => {
+  return {
+    type: 'CLEAR-CART'
+  }
+}
