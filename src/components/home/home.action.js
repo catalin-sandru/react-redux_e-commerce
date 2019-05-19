@@ -47,7 +47,7 @@ export const DecrementAction = id => {
 }
 
 
-export const ClearCartAction = () => {
+export const ClearCartAction = id => {
   return {
     type: 'CLEAR-CART'
   }

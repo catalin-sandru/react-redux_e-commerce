@@ -1,15 +1,13 @@
 import { storeProducts } from '../../asset/data';
 
-  const getItem = id => {
-  let product = storeProducts.find(item => item.id === id)
-  return product
+const getItem = id => {
+let product = storeProducts.find(item => item.id === id)
+return product
 }
 
-export const HomeReducer = (state = storeProducts, action) => {
-  switch(action.type) {
-    default:
-      return [...state]
-  }
+
+export const HomeReducer = (state = storeProducts) => {
+  return [...state]
 }
 
 export const DetailReducer = (state = [], action) => {
@@ -35,9 +33,9 @@ export const ModalReducer = (state = [], action) => {
 
 
 export const CartReducer = (state = [], action) => {
+  const product = getItem(action.id);
   switch(action.type) {
     case 'ADD_TO_CART':
-      const product = getItem(action.id);
       product.count = 1;
       product.inCart = true;
       product.total = product.count * product.price;
@@ -64,14 +62,15 @@ export const CartReducer = (state = [], action) => {
       )
     
     case 'CLEAR-CART':
-      state.map(item => item.inCart = false)
+      storeProducts.map(item => item.inCart = false)
       return state = [];
 
     case 'REMOVE-ITEM':
+      product.inCart = false
       const findItem = state.find(item => item.id === action.id)
-      findItem.inCart = false
       const index = state.indexOf(findItem)
-      state.splice([index])
+      console.log(index)
+      state.splice([index], 1)
       return [...state]
       
     default:
