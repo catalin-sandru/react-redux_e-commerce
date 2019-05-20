@@ -11,8 +11,6 @@ linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transpar
 background-color: #131313;
 background-size: 20px 20px;
 padding: 1rem;
-border-bottom-left-radius: 100% 0.7rem;
-border-bottom-right-radius: 100% 0.7rem;
 
 p {
   margin-left: 0.5rem;

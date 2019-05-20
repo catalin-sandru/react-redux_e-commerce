@@ -3,9 +3,9 @@ import { DetailsStyle } from './details.style';
 import { connect } from 'react-redux';
 import { Button } from '../button/button.component';
 import { Link } from 'react-router-dom'
-import { AddToCartAction } from '../home/home.action';
+import { AddToCartAction, OpenModalAction } from '../home/home.action';
 
-const Details = ({product, addToCart}) => {
+const Details = ({product, addToCart, openModal}) => {
   return(
     <DetailsStyle>
     {product.map(({title, info, img, id, company, price, inCart}) => {
@@ -29,7 +29,10 @@ const Details = ({product, addToCart}) => {
                     <Button
                       buttonText="go to cart"/>
                   </Link> : 
-                  <div onClick={() => addToCart(id)}>
+                  <div onClick={() => {
+                      addToCart(id)
+                      openModal(id)}
+                  }>
                     <Button
                       buttonText="add to cart"/>
                   </div>
@@ -45,7 +48,8 @@ const Details = ({product, addToCart}) => {
 
 const mapStateToProps = state => ({product: state.DetailReducer});
 const mapDispachToProps = dispach => ({
-  addToCart: id => dispach(AddToCartAction(id))
+  addToCart: id => dispach(AddToCartAction(id)),
+  openModal: id => dispach(OpenModalAction(id))
 })
   
 export default connect(mapStateToProps, mapDispachToProps)(Details);

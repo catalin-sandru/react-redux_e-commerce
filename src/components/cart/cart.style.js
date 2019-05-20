@@ -8,6 +8,7 @@ export const CartStyle = styled.div`
   grid-gap: 0.5rem;
   width: 100%;
   font-weight: bold;
+  background: var(--bianca);
 
 
   h6 {

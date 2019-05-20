@@ -1,15 +1,21 @@
 import styled from 'styled-components'
 
 export const ProductWrapper = styled.div`
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background: var(--bianca);
+  border-radius: 1rem;
+
+  &:hover {
+    box-shadow: 0px 0px 9px 7px rgba(18,18,18,1);
+    transition: all 0.5s;
+  }
+
 
   .img_holder {
     text-align: center;
     position: relative;
-    border-bottom: 1px solid black;
     overflow: hidden;
     cursor: pointer;
 
@@ -20,7 +26,14 @@ export const ProductWrapper = styled.div`
       bottom: 0;
       transform: translate(100%, 100%);
       transition: 0.3s;
-      background: red;
+      background: var(--gold);
+      border-top-left-radius: 0.6rem;
+      border-bottom-left-radius: 0.6rem;
+
+      &:hover {
+        color: var(--gold);
+        background: var(--woodsmoke);
+      }
     }
 
     img {

@@ -12,7 +12,7 @@ export const HomeReducer = (state = storeProducts) => {
 
 export const DetailReducer = (state = [], action) => {
   switch(action.type) {
-    case 'details':
+    case 'DETAILS':
       const product = getItem(action.id) 
       return state = [product]
     default:
@@ -22,7 +22,7 @@ export const DetailReducer = (state = [], action) => {
 
 export const ModalReducer = (state = [], action) => {
   switch(action.type) {
-    case 'openModal':
+    case 'OPEN-MODAL':
       return state = [getItem(action.id)]
     case 'CLOSE_MODAL':
       return state = []

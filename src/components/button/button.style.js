@@ -12,6 +12,7 @@ export const ButtonStyle = styled.button`
   color: var(--woodsmoke);
   font-size: 1rem;
   text-transform: capitalize;
+  background: var(--bianca);
 
   
   a {

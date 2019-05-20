@@ -1,20 +1,20 @@
 export const HomeAction = payload => {
   return {
-    type: 'GET_ITEM', 
+    type: 'GET-ITEM', 
     payload
   }
 }
 
 export const DetailAction = id => {
   return {
-    type: 'details',
+    type: 'DETAILS',
     id
   }
 }
 
 export const OpenModalAction = id => {
   return {
-    type: 'openModal',
+    type: 'OPEN-MODAL',
     id
   }
 }
