@@ -9,5 +9,11 @@ export const CartQuantityStyle = styled.div`
     height: 1.5rem;
     border: 1px solid black;
     margin: 0.2rem;
+    cursor: pointer;
+
+    &:nth-child(2) {
+      cursor: initial;
+    }
   }
+
 `

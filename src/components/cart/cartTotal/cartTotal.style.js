@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CartTotalStyle = styled.div`
 
-  h5 {
+  h4 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }

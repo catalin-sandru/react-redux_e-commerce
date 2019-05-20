@@ -14,7 +14,7 @@ const CartTotal = ({cartItem, clearCart}) => {
   
   return(
     <CartTotalStyle>
-      <h5>Cart Total: £{totalHandler()}</h5>
+      <h4>Cart Total: £{totalHandler()}</h4>
       <Button 
         clearCart={clearCart}
         buttonText="clear cart"/>

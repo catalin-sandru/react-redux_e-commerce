@@ -38,5 +38,9 @@ export const CartStyle = styled.div`
       height: auto;
       justify-self: center;
     }
+
+    i {
+      cursor: pointer;
+    }
   }
 `
