@@ -8,7 +8,7 @@ export const ProductWrapper = styled.div`
   border-radius: 1rem;
 
   &:hover {
-    box-shadow: 0px 0px 9px 7px rgba(18,18,18,1);
+    box-shadow: 0px 0px 9px 7px rgba(18,18,18,0.5);
     transition: all 0.5s;
   }
 

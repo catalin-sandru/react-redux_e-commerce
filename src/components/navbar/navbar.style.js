@@ -36,10 +36,19 @@ p {
     display: inherit;
     align-items: center;
 
+    a:visited {
+      color: var(--woodsmoke);
+
+      &:hover {
+        color: var(--gold);
+      }
+    }
+
     i {
-      color: black;
+      color: var(--woodsmoke);
       font-size: 3rem;
       margin-left: 1rem;
     }
+
   }
 `

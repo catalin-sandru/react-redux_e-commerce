@@ -30,6 +30,7 @@ const Modal = ({modalItem, closeModal}) => {
             <Link to="/cart">
               <div onClick={closeModal}>
                 <Button
+                  cart
                   buttonText="go to cart"
                   className="button"
                   />

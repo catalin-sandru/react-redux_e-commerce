@@ -27,6 +27,7 @@ const Details = ({product, addToCart, openModal}) => {
                 {inCart ? 
                   <Link to="/cart">
                     <Button
+                      cart
                       buttonText="go to cart"/>
                   </Link> : 
                   <div onClick={() => {
@@ -34,6 +35,7 @@ const Details = ({product, addToCart, openModal}) => {
                       openModal(id)}
                   }>
                     <Button
+                      cart
                       buttonText="add to cart"/>
                   </div>
                   }

@@ -12,13 +12,11 @@ export const ModalStyle = styled.div`
   
   
   .modal {
-    border-radius: 3rem 0;
-    box-shadow: 5px 5px 13px 13px rgba(221,178,19,0.77);
+    border-radius: 1rem;
     background: var(--bianca);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid var(--gold);
     margin: auto;
     max-width: 30%;
 
