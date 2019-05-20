@@ -1,20 +1,24 @@
 import styled from 'styled-components'
 
 export const ModalStyle = styled.div`
-  color: red;
+  color: var(--woodsmoke);
   display: flex;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background: var(--black-pearl);
+  
   
   .modal {
-    background: var(--black-pearl);
+    border-radius: 3rem 0;
+    box-shadow: 5px 5px 13px 13px rgba(221,178,19,0.77);
+    background: var(--bianca);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid whitesmoke;
+    border: 3px solid var(--gold);
     margin: auto;
     max-width: 30%;
 
@@ -25,12 +29,13 @@ export const ModalStyle = styled.div`
   
     h3 {
       padding: 0.5rem;
+      text-align: center;
     }
   
     .button {
       margin: 0.5rem;
     }
-  
+
     a {
       text-decoration: none;
       font-weight: bold;

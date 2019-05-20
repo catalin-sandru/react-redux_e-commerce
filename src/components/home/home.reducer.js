@@ -69,7 +69,6 @@ export const CartReducer = (state = [], action) => {
       product.inCart = false
       const findItem = state.find(item => item.id === action.id)
       const index = state.indexOf(findItem)
-      console.log(index)
       state.splice([index], 1)
       return [...state]
       

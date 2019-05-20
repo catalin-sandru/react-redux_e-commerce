@@ -1,6 +1,8 @@
 :root {
   --bianca: #FBF7EF;
-  --black-pearl: #031026;
+  --black-pearl: rgba(3, 16, 38, 0.75);
+  --gold: #FFD700;
+  --woodsmoke: #15181E;
 }
 
 * {

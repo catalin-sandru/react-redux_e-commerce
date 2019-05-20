@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  font-family: 'Baloo Bhai', cursive;
+}
+
+h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+h4, strong {
+  font-family: 'Righteous', cursive;
+}
+
+p {
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+}

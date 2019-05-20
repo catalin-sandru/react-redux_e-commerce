@@ -5,15 +5,14 @@ max-width: 80%;
 justify-self: center;
 
 h4 {
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 a {
   text-decoration: none;
-  text-transform: capitalize;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   width: 80%;
   margin: auto;
 
@@ -38,10 +37,10 @@ a {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   margin: auto;
 
-  .detailsWrapper{
+  .detailsWrapper {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
@@ -53,9 +52,11 @@ a {
     margin: 1.5rem 0;
   }
   
-  img: {
+  img {
     grid-column: 1/2;
     grid-row: 2/3;
+    max-width: 100%;
+    height: auto;
   }
   
   h3, h4, strong, p {
@@ -66,11 +67,17 @@ a {
   .detailButton {
     margin: 1.5rem 0;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 
     a {
       margin: 0 1rem;
     }
   }
+  }
+
+  strong {
+    margin-bottom: 1rem;
   }
 }
 `

@@ -27,8 +27,8 @@ const Products = ({title, img, price, id, getProductDetails, openModal, addToCar
         </button>
       </div>
       <div className="prod_description">
-        <h4>{title}</h4>
-        <h4>£: {price}</h4>
+        <h3>{title}</h3>
+        <h3>£: {price}</h3>
       </div>
     </ProductWrapper>
   )
